@@ -5,7 +5,7 @@ services:
     volumes:
       - '/etc/alist:/opt/alist/data'
     ports:
-      - '3617:3617'
+      - '5244:5244'
     environment:
       - PUID=0
       - PGID=0
