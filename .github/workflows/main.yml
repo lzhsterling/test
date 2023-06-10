@@ -44,9 +44,7 @@ jobs:
 
     - name: "激活命名空间"
       uses: okteto/namespace@latest
-      with:
-        name: html5syt
-        
+      
     - name: "创建 stack"
       uses: okteto/deploy-stack@latest
       with:
