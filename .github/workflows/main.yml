@@ -49,3 +49,4 @@ jobs:
       with:
         build: "true"
         namespace: html5syt
+        name: alist
