@@ -48,5 +48,4 @@ jobs:
       uses: okteto/deploy-stack@latest
       with:
         build: "true"
-        namespace: html5syt
-        name: Alist-Okteto
+        name: alist
