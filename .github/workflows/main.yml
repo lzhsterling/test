@@ -46,6 +46,4 @@ jobs:
     
     - name: "重新部署"
       uses: okteto/deploy-stack@latest
-      with:
-        build: "true"
-        name: alist
+      
