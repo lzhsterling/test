@@ -1,18 +1,20 @@
-version: '3.3'
+version: "2.1"
 services:
-    alist:
-        restart: always
-        volumes:
-            - alist:/opt/alist/data
-        ports:
-            - '5244:5244'
-        environment:
-            - PUID=0
-            - PGID=0
-            - UMASK=022
-        container_name: Alist
-        image: 'xhofe/alist-aria2:latest'
-volumes:
-  alist:
-    size: 2248Mi
-
+  plex:
+    image: linuxserver/plex
+    container_name: plex
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - PLEX_CLAIM=your-claim
+    volumes:
+      - ./config:/config
+      - /path/to/your/music/library:/musics:ro
+    restart: unless-stopped
+    mem_limit: 700m
+    memswap_limit: 2000m
+    devices:
+      - /dev/dri:/dev/dri #optional
+    ports:
+      - 32400:32400
